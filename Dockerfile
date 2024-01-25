@@ -4,6 +4,7 @@ LABEL organization="Benz"
 ARG DOWNLOAD_LOCATION=https://referenceapplicationskhaja.s3.us-west-2.amazonaws.com/spring-petclinic-2.4.2.jar
 ARG USERNAME=petclinic
 ARG HOMEDIR=/petclinic
+ENV hit=run 
 RUN adduser -h ${HOMEDIR} -s /bin/sh -D ${USERNAME}
 USER ${USERNAME}
 WORKDIR ${HOMEDIR}
